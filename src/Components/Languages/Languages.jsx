@@ -1,5 +1,5 @@
 import React from 'react'
-import languagesImg from '../../assets/languages.png'
+import languagesImg from '../../img/languages.png'
 
 export const Languages = () => {
   return (

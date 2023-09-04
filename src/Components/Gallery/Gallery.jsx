@@ -1,11 +1,11 @@
 import React from 'react'
 import { useState } from 'react'
 
-import carouselButtonLeft from '../../assets/gallery/gallery-carousel/carousel-button-left.png'
-import carouselButtonRight from '../../assets/gallery/gallery-carousel/carousel-button-right.png'
-import carouselIndexCurrentImg from '../../assets/gallery/gallery-carousel/carousel-index-current.png'
-import carouselIndexIndicatorImg from '../../assets/gallery/gallery-carousel/carousel-index-indicator.png'
-import carouselBack from '../../assets/gallery/gallery-carousel/back-button.png'
+import carouselButtonLeft from '../../img/carousel-button-left.png'
+import carouselButtonRight from '../../img/carousel-button-right.png'
+import carouselIndexCurrentImg from '../../img/carousel-index-current.png'
+import carouselIndexIndicatorImg from '../../img/carousel-index-indicator.png'
+import carouselBack from '../../img/back-button.png'
 
 import images from './gallery.json'
 import imagesCarousel from './gallery-carousel.json'
@@ -37,8 +37,8 @@ export const Gallery = () => {
   };
 
 
-  const imageSrc = './src/assets/gallery/'
-  const imageCarouselSrc = './src/assets/gallery/gallery-carousel/'
+  const imageSrc = '/assets/gallery/'
+  const imageCarouselSrc = '/assets/gallery/gallery-carousel/'
 
   return (
     <div>

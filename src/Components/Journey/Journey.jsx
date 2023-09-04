@@ -1,5 +1,5 @@
 import React from 'react'
-import journeyImg from '../../assets/journey.png'
+import journeyImg from '../../img/journey.png'
 
 export const Journey = () => {
   return (

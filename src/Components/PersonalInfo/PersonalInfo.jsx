@@ -1,5 +1,5 @@
 import React from 'react'
-import bgImage from '../../assets/personalinfo.png'
+import bgImage from '../../img/personalinfo.png'
 
 export const PersonalInfo = () => {
   return (

@@ -5,7 +5,7 @@
 html {
     font-family:'Indie Flower', cursive;
     -webkit-text-stroke-width: 1px;
-    background-image: url("./assets/back.png");
+    background-image: url("./img/back.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

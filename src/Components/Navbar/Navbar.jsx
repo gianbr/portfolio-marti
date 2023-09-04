@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import navSelectedImg from '../../assets/nav-selected.png'
-import navMenuImg from '../../assets/nav-menu.png'
+import navSelectedImg from '../../img/nav-selected.png'
+import navMenuImg from '../../img/nav-menu.png'
 import { useLocation } from "react-router-dom";
 
 export const Navbar = () => {

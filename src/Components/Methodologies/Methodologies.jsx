@@ -1,5 +1,5 @@
 import React from 'react'
-import methodologiesImg from '../../assets/methodologies.png'
+import methodologiesImg from '../../img/methodologies.png'
 
 export const Methodologies = () => {
   return (
