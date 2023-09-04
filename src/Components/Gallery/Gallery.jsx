@@ -37,8 +37,8 @@ export const Gallery = () => {
   };
 
 
-  const imageSrc = 'src/assets/gallery/'
-  const imageCarouselSrc = 'src/assets/gallery/gallery-carousel/'
+  const imageSrc = './src/assets/gallery/'
+  const imageCarouselSrc = './src/assets/gallery/gallery-carousel/'
 
   return (
     <div>
