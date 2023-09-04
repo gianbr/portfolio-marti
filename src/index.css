@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    font-family:'Indie Flower', cursive;
+    -webkit-text-stroke-width: 1px;
+    background-image: url("./assets/back.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
