@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import navSelectedImg from '../../img/nav-selected.png'
 import navMenuImg from '../../img/nav-menu.png'
@@ -7,6 +7,26 @@ import { useLocation } from "react-router-dom";
 export const Navbar = () => {
     const path = useLocation().pathname;
     const location = path.split("/")[1];
+
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+    const handleScroll = () => {
+        if (window.scrollY > 0) {
+        setIsScrolled(true);
+        } else {
+        setIsScrolled(false);
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+    };
+    }, []);
+
 
     const defaultYPadding = {
         paddingTop: '2.75rem',
@@ -21,7 +41,7 @@ export const Navbar = () => {
     const navPadding = location === 'gallery' || location === 'journey' ? paddingYStyle : defaultYPadding;
 
   return (
-    <nav className='flex justify-center text-[32px] text-[#323232]' style={navPadding}>
+    <nav className={`z-50 flex justify-center text-[32px] text-[#323232] sticky top-0 ${location === 'gallery' && isScrolled ? 'bg-black bg-opacity-30' : ''}`} style={navPadding}>
         <div className='flex gap-4'>
             <NavLink to='/' className='relative cursor-pointer'>
                 { location === '' ? <img src={navSelectedImg} alt="Home" /> : <img src={navMenuImg} alt="Home" />}
