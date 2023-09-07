@@ -42,9 +42,9 @@ export const Gallery = () => {
 
   return (
     <div>
-      {!selectedImage && <div className='max-w-7xl m-auto grid grid-cols-3 grid-rows-3 gap-10 mb-6'>
+      {!selectedImage && <div className='m-auto max-w-[93rem] grid grid-cols-3 gap-10 mb-6'>
           {images.map((image) =>
-          <img className='cursor-pointer hover:-rotate-6' src={imageSrc + image.url} alt={image.caption} key={image.id} onClick={() => openImage(image.id - 1)}/>
+          <img className='cursor-pointer hover:-rotate-2' src={imageSrc + image.url} alt={image.caption} key={image.id} onClick={() => openImage(image.id - 1)}/>
           )}
       </div>}
       {selectedImage && (
@@ -52,7 +52,7 @@ export const Gallery = () => {
           <button className='cursor-pointer' onClick={closeImage}>
             <img src={carouselBack} alt="carousel-back" />
           </button>
-          <div className="flex flex-col items-center gap-16">
+          <div className="flex flex-col items-center gap-14">
             <div className='max-w-screen-xl h-[590px]'>
               <img src={imageCarouselSrc + imagesCarousel[currentIndex].url} alt={selectedImage.caption} />
             </div>

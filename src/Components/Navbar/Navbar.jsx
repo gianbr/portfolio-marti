@@ -8,8 +8,20 @@ export const Navbar = () => {
     const path = useLocation().pathname;
     const location = path.split("/")[1];
 
+    const defaultYPadding = {
+        paddingTop: '2.75rem',
+        paddingBottom: '1rem',
+    }
+
+    const paddingYStyle = {
+        paddingTop: '2.75rem',
+        paddingBottom: '2.75rem',
+    };
+    
+    const navPadding = location === 'gallery' || location === 'journey' ? paddingYStyle : defaultYPadding;
+
   return (
-    <nav className='flex justify-center text-[32px] text-[#323232] p-11 mb-7'>
+    <nav className='flex justify-center text-[32px] text-[#323232]' style={navPadding}>
         <div className='flex gap-4'>
             <NavLink to='/' className='relative cursor-pointer'>
                 { location === '' ? <img src={navSelectedImg} alt="Home" /> : <img src={navMenuImg} alt="Home" />}
