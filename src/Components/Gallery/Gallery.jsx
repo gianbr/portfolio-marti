@@ -8,7 +8,7 @@ import carouselIndexIndicatorImg from '../../img/carousel-index-indicator.png'
 import carouselBack from '../../img/back-button.png'
 
 import images from './gallery.json'
-import imagesCarousel from './gallery-carousel.json'
+// import imagesCarousel from './gallery-carousel.json'
 
 export const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null)
@@ -36,38 +36,60 @@ export const Gallery = () => {
     }
   };
 
+  const imagesCarrousel = [
+    { id: 1, url: "/assets/gallery/gallery-carousel/carousel-onboarding.png", "caption": "Onboarding" },
+    { id: 2, url: "/assets/gallery/gallery-carousel/carousel-zomboard.png", "caption": "Zomboard" },
+    { id: 3, url: "/assets/gallery/gallery-carousel/carousel-astrology.png", "caption": "Astrology" },
+    { id: 4, url: "/assets/gallery/gallery-carousel/carousel-scoreboard.png", "caption": "Scoreboard" },
+    { id: 5, url: "/assets/gallery/gallery-carousel/carousel-fermin.png", "caption": "Fermin" },
+    { id: 6, url: "/assets/gallery/gallery-carousel/carousel-goodreads.png", "caption": "Goodreads" },
+    { id: 7, url: "/assets/gallery/gallery-carousel/carousel-veganapp.png", "caption": "Veganapp" },
+    { id: 8, url: "/assets/gallery/gallery-carousel/carousel-terappi.png", "caption": "Terappi" },
+    { id: 9, url: "/assets/gallery/gallery-carousel/carousel-portfolio.png", "caption": "Portfolio" }
+]
 
   const imageSrc = '/assets/gallery/'
-  const imageCarouselSrc = '/assets/gallery/gallery-carousel/'
 
   return (
     <div>
-      {!selectedImage && <div className='m-auto max-w-[93rem] grid grid-cols-3 gap-10 mb-6'>
+      {!selectedImage && <div className='m-auto max-w-[93rem] grid grid-cols-3 gap-10 mb-6 animate-fade animate-duration-[800ms]'>
           {images.map((image) =>
-          <img className='cursor-pointer hover:-rotate-2' src={imageSrc + image.url} alt={image.caption} key={image.id} onClick={() => openImage(image.id - 1)}/>
+          <img className='cursor-pointer hover:-rotate-2 hover:duration-300 transition ease-in-out' src={imageSrc + image.url} alt={image.caption} key={image.id} onClick={() => openImage(image.id - 1)}/>
           )}
       </div>}
       {selectedImage && (
         <div className="w-full z-50 max-w-screen-2xl m-auto">
-          <button className='cursor-pointer' onClick={closeImage}>
+          {/* Back button */}
+          <button className='cursor-pointer absolute top-[3rem] z-50 hover:-rotate-2 hover:duration-300 transition ease-in-out' onClick={closeImage}> 
             <img src={carouselBack} alt="carousel-back" />
           </button>
-          <div className="flex flex-col items-center gap-14">
-            <div className='max-w-screen-xl h-[590px]'>
-              <img src={imageCarouselSrc + imagesCarousel[currentIndex].url} alt={selectedImage.caption} />
+          <div className="flex flex-col items-center justify-center gap-16 overflow-hidden w-[78rem] m-auto">
+            <div className='max-w-screen-xl h-[590px] whitespace-nowrap' style={{transition: 'transform 0.3s', boxShadow: '0 5px 15px rgba(0, 0, 0, 0.05)', transform: `translate(-${currentIndex * 100}%)`}}>
+              {/* Carousel image */}
+              {imagesCarrousel.map((image) => {
+                return (
+                  <div key={image.id} style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center'}}>
+                  
+                    <img src={image.url} alt={image.caption} />
+                  </div>
+                )
+              }
+              )}
             </div>
             <div className='flex items-center gap-8'>
-              <button className="cursor-pointer" onClick={goToPrevImage}>
+              {/* Prev button */}
+              <button className="cursor-pointer hover:-rotate-2 hover:duration-300 transition ease-in-out" onClick={goToPrevImage}>
                 <img src={carouselButtonLeft} alt="" />
               </button>
               <div className='flex gap-6'>
               {
                 images.map((_, index) => (
-                  <img src={index === currentIndex ? carouselIndexCurrentImg : carouselIndexIndicatorImg} alt="carousel-indicator" key={index} />
+                  <img className='cursor-pointer' onClick={() => setCurrentIndex(index) } src={index === currentIndex ? carouselIndexCurrentImg : carouselIndexIndicatorImg} alt="carousel-indicator" key={index} />
                 ))
               }
               </div>
-              <button className='cursor-pointer' onClick={goToNextImage}>
+              {/* Next button */}
+              <button className='cursor-pointer hover:-rotate-2 hover:duration-300 transition ease-in-out' onClick={goToNextImage}>
                 <img src={carouselButtonRight} alt="" />
               </button>
             </div>

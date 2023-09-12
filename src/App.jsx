@@ -8,7 +8,7 @@ import {  BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
 
   return (
-    <div className='text-slate-300 font-indie'>
+    <div className='text-slate-300 font-indie relative'>
       <BrowserRouter>
         <Navbar/>
         <Routes>

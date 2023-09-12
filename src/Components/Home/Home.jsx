@@ -5,7 +5,7 @@ import { Methodologies } from '../Methodologies/Methodologies'
 
 export const Home = () => {
   return (
-    <div className='flex items-center justify-around gap-x-44'>
+    <div className='flex items-center justify-around gap-x-44 animate-fade animate-duration-[800ms]'>
         <div>
             <PersonalInfo/>
         </div>
