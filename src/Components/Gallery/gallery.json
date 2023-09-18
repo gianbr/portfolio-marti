@@ -1,11 +1,52 @@
 [
-    { "id": 1, "url": "gallery-onboarding.png", "caption": "Onboarding" },
-    { "id": 2, "url": "gallery-zomboard.png", "caption": "Zomboard" },
-    { "id": 3, "url": "gallery-astrology.png", "caption": "Astrology" },
-    { "id": 4, "url": "gallery-scoreboard.png", "caption": "Scoreboard" },
-    { "id": 5, "url": "gallery-fermin.png", "caption": "Fermin" },
-    { "id": 6, "url": "gallery-goodreads.png", "caption": "Goodreads" },
-    { "id": 7, "url": "gallery-veganapp.png", "caption": "Veganapp" },
-    { "id": 8, "url": "gallery-terappi.png", "caption": "Terappi" },
-    { "id": 9, "url": "gallery-portfolio.png", "caption": "Portfolio" }
+    {
+        "caption": "Sci-fi",
+        "id": 1,
+        "url": "gallery-scifi.png"
+    },
+    {
+        "caption": "Onboarding",
+        "id": 2,
+        "url": "gallery-onboarding.png"
+    },
+    {
+        "caption": "Zomboard",
+        "id": 3,
+        "url": "gallery-zomboard.png"
+    },
+    {
+        "caption": "Astrology",
+        "id": 4,
+        "url": "gallery-astrology.png"
+    },
+    {
+        "caption": "Scoreboard",
+        "id": 5,
+        "url": "gallery-scoreboard.png"
+    },
+    {
+        "caption": "Fermin",
+        "id": 6,
+        "url": "gallery-fermin.png"
+    },
+    {
+        "caption": "Goodreads",
+        "id": 7,
+        "url": "gallery-goodreads.png"
+    },
+    {
+        "caption": "Veganapp",
+        "id": 8,
+        "url": "gallery-veganapp.png"
+    },
+    {
+        "caption": "Terappi",
+        "id": 9,
+        "url": "gallery-terappi.png"
+    },
+    {
+        "caption": "Portfolio",
+        "id": 10,
+        "url": "gallery-portfolio.png"
+    }
 ]

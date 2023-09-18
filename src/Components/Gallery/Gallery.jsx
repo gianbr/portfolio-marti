@@ -8,7 +8,6 @@ import carouselIndexIndicatorImg from '../../img/carousel-index-indicator.png'
 import carouselBack from '../../img/back-button.png'
 
 import images from './gallery.json'
-// import imagesCarousel from './gallery-carousel.json'
 
 export const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null)
@@ -37,15 +36,16 @@ export const Gallery = () => {
   };
 
   const imagesCarrousel = [
-    { id: 1, url: "/assets/gallery/gallery-carousel/carousel-onboarding.png", "caption": "Onboarding" },
-    { id: 2, url: "/assets/gallery/gallery-carousel/carousel-zomboard.png", "caption": "Zomboard" },
-    { id: 3, url: "/assets/gallery/gallery-carousel/carousel-astrology.png", "caption": "Astrology" },
-    { id: 4, url: "/assets/gallery/gallery-carousel/carousel-scoreboard.png", "caption": "Scoreboard" },
-    { id: 5, url: "/assets/gallery/gallery-carousel/carousel-fermin.png", "caption": "Fermin" },
-    { id: 6, url: "/assets/gallery/gallery-carousel/carousel-goodreads.png", "caption": "Goodreads" },
-    { id: 7, url: "/assets/gallery/gallery-carousel/carousel-veganapp.png", "caption": "Veganapp" },
-    { id: 8, url: "/assets/gallery/gallery-carousel/carousel-terappi.png", "caption": "Terappi" },
-    { id: 9, url: "/assets/gallery/gallery-carousel/carousel-portfolio.png", "caption": "Portfolio" }
+    { id: 1, url: "/assets/gallery/gallery-carousel/carousel-scifi.png", "caption": "Sci-fi" },
+    { id: 2, url: "/assets/gallery/gallery-carousel/carousel-onboarding.png", "caption": "Onboarding" },
+    { id: 3, url: "/assets/gallery/gallery-carousel/carousel-zomboard.png", "caption": "Zomboard" },
+    { id: 4, url: "/assets/gallery/gallery-carousel/carousel-astrology.png", "caption": "Astrology" },
+    { id: 5, url: "/assets/gallery/gallery-carousel/carousel-scoreboard.png", "caption": "Scoreboard" },
+    { id: 6, url: "/assets/gallery/gallery-carousel/carousel-fermin.png", "caption": "Fermin" },
+    { id: 7, url: "/assets/gallery/gallery-carousel/carousel-goodreads.png", "caption": "Goodreads" },
+    { id: 8, url: "/assets/gallery/gallery-carousel/carousel-veganapp.png", "caption": "Veganapp" },
+    { id: 9, url: "/assets/gallery/gallery-carousel/carousel-terappi.png", "caption": "Terappi" },
+    { id: 10, url: "/assets/gallery/gallery-carousel/carousel-portfolio.png", "caption": "Portfolio" }
 ]
 
   const imageSrc = '/assets/gallery/'
@@ -63,12 +63,12 @@ export const Gallery = () => {
           <button className='cursor-pointer absolute top-[3rem] z-50 hover:-rotate-2 hover:duration-300 transition ease-in-out' onClick={closeImage}> 
             <img src={carouselBack} alt="carousel-back" />
           </button>
-          <div className="flex flex-col items-center justify-center gap-16 overflow-hidden w-[78rem] m-auto">
+          <div className="flex flex-col items-center justify-center gap-28 overflow-hidden w-[78rem] m-auto">
             <div className='max-w-screen-xl h-[590px] whitespace-nowrap' style={{transition: 'transform 0.3s', boxShadow: '0 5px 15px rgba(0, 0, 0, 0.05)', transform: `translate(-${currentIndex * 100}%)`}}>
               {/* Carousel image */}
               {imagesCarrousel.map((image) => {
                 return (
-                  <div key={image.id} style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center'}}>
+                  <div key={image.id} style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '100%'}}>
                   
                     <img src={image.url} alt={image.caption} />
                   </div>
