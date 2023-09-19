@@ -3,8 +3,8 @@ import methodologiesImg from '../../img/methodologies.png'
 
 export const Methodologies = () => {
   return (
-    <div className='pr-36'>
-        <img src={methodologiesImg} alt="" />
+    <div>
+      <img src={methodologiesImg} alt="Methodologies" />
     </div>
   )
 }
